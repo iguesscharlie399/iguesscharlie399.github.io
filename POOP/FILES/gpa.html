@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>GPA CALCULATION</title>
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<script src="gpa.js"></script>
+
+</head>
+<body>
+
+	<header>
+		<img src="images/AUM.png" alt="AUM" usemap="#home">
+		<map name = "home">
+			<area href="index.html" alt="Home Page" title ="pumpkin"shape="circ" coords="0,0,1850,1780,"
+		</map>
+		<h1>Warhawks Rock!!! Whoo!</h1>
+		
+		<nav id="navigation_top">
+        	<ul>
+            		<li><a href="index.html">HOME</a></li>
+           		<li><a href="cs.html">COMPUTER SCIENCE</a></li>
+            		<li><a href="ta.html">TEACHING ASSISTANT</a></li>
+            		<li><a class="current" href="gpa.html">GPA CALCULATION</a></li>
+            		<li><a href="temp.html">BONUS PAGE</a></li>
+        	</ul>
+		</nav>
+		
+	</header>
+	
+	<h1>GPA CALCULATOR</h1>
+
+	<main>
+<FORM Name="GPA">
+<TABLE>
+<TH></TH>
+<TH>Grade</TH>
+<TH>Credit Hours</TH>
+<TR>
+<TD>Class 1</TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="GR1" ALIGN=TOP 
+MAXLENGTH=5></TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="CR1" ALIGN=TOP 
+MAXLENGTH=5></TD>
+</TR>
+<TR>
+<TD>Class 2</TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="GR2" ALIGN=TOP 
+MAXLENGTH=5></TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="CR2" ALIGN=TOP 
+MAXLENGTH=5></TD>
+</TR>
+<TR>
+<TD>Class 3</TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="GR3" ALIGN=TOP 
+MAXLENGTH=5></TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="CR3" ALIGN=TOP 
+MAXLENGTH=5></TD>
+</TR>
+<TR>
+<TD>Class 4</TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="GR4" ALIGN=TOP 
+MAXLENGTH=5></TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="CR4" ALIGN=TOP 
+MAXLENGTH=5></TD>
+</TR>
+<TR>
+<TD>Class 5</TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="GR5" ALIGN=TOP 
+MAXLENGTH=5></TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="CR5" ALIGN=TOP 
+MAXLENGTH=5></TD>
+</TR>
+<TR>
+<TD>Class 6</TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="GR6" ALIGN=TOP 
+MAXLENGTH=5></TD>
+<TD><INPUT TYPE=TEXT SIZE=5 NAME="CR6" ALIGN=TOP 
+MAXLENGTH=5></TD>
+</TR>
+<TR ALIGN=CENTER>
+<TD COLSPAN=3><INPUT TYPE="BUTTON" VALUE="Calculate" 
+NAME="CalcButton"
+OnClick="gpacalc()"></TD>
+</TR>
+</TABLE>
+</FORM>
+<BR>
+<P>
+
+<P>
+
+<BR>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- 
+function gpacalc()
+{
+//define valid grades and their values
+var gr = new Array(9); 
+var cr = new Array(9);
+var ingr = new Array(5);
+var incr = new Array(5);
+
+// define valid grades and their values
+var grcount = 5; 
+gr[0] = "A"; 
+cr[0] = 4; 
+gr[1] = "B";
+cr[1] = 3;
+gr[2] = "C";
+cr[2] = 2;
+gr[3] = "D";
+cr[3] = 1;
+gr[4] = "F";
+cr[4] = 0;
+// retrieve user input
+ingr[0] = document.GPA.GR1.value;
+ingr[1] = document.GPA.GR2.value;
+ingr[2] = document.GPA.GR3.value;
+ingr[3] = document.GPA.GR4.value;
+ingr[4] = document.GPA.GR5.value;
+ingr[5] = document.GPA.GR6.value;
+incr[0] = document.GPA.CR1.value;
+incr[1] = document.GPA.CR2.value;
+incr[2] = document.GPA.CR3.value;
+incr[3] = document.GPA.CR4.value;
+incr[4] = document.GPA.CR5.value;
+incr[5] = document.GPA.CR6.value;
+
+// Calculate GPA
+var allgr =0;
+var allcr = 0;
+var gpa = 0;
+for (var x = 0; x < 5 + 3; x++)
+        {
+        if (ingr[x] == "") break;
+//      if (isNaN(parseInt(incr[x]))) alert("Error"); 
+        var validgrcheck = 0;
+        for (var xx = 0; xx < grcount; xx++)
+                {
+                if (ingr[x] == gr[xx])
+                        {
+                        allgr = allgr + (parseInt(incr[x],10) * cr[xx]);
+                        allcr = allcr + parseInt(incr[x],10);
+                        validgrcheck = 1;
+                        break;
+                        }
+                }
+        if (validgrcheck == 0)
+                {
+                alert("Error");
+                return 0;
+                }
+        }
+
+gpa = allgr / allcr;
+
+alert("GPA =  " + eval(gpa));
+
+return 0;
+}
+
+//-->
+    
+</SCRIPT>
+
+	</main>
+	
+	<footer>
+		
+		<p>&copy; Name & Phone Number 2021</p>
+	</footer>
+	
+</body>
+</html>
