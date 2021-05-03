@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>TEACHING ASSISTANT</title>
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+
+	<header>
+		<img src="images/AUM.png" alt="AUM" usemap="#home">
+		<map name = "home">
+			<area href="index.html" alt="Home Page" title ="pumpkin"shape="circ" coords="0,0,1850,1780,"
+		</map>
+		<h1>Warhawks Rock!!! Whoo!</h1>
+		
+		<nav id="navigation_top">
+        	<ul>
+            		<li><a href="index.html">HOME</a></li>
+           		<li><a href="cs.html">COMPUTER SCIENCE</a></li>
+            		<li><a class="current" href="ta.html">TEACHING ASSISTANT</a></li>
+            		<li><a href="gpa.html">GPA CALCULATION</a></li>
+            		<li><a href="temp.html">BONUS PAGE</a></li>
+        	</ul>
+		</nav>
+		
+	</header>
+	
+	
+	<main>
+
+    <style>
+    	* {
+    		margin: 0;
+    		padding: 0;
+    	}
+		form {
+			font: 87.5% Arial, Helvetica, sans-serif;
+			width: 500px;
+		    margin: 20px auto;
+		    padding: 20px;
+		    border: 2px solid blue;
+		}
+		h1 {
+		
+		h2 {
+			font-size: 115%;
+			padding: .5em 0;
+		}
+		label {
+			color: blue;
+			float: left;
+			width: 8em;
+			font-weight: bold;
+			text-align: left;
+		}
+		input {
+			width: 15em;
+			margin: 0 0 .5em 1em;
+		}
+		#button, #reset {
+			width: 7em;
+			background-color: silver;
+			box-shadow: 2px 2px 0 blue; }
+		#button {
+			margin-left: 9em;
+		}
+		input[type="checkbox"]{
+		width: 13px;
+		}
+		
+	</style>	
+
+<h1>Teaching Assistant</h1>
+<form name="myform" action="survey_data.html" method="get">
+	
+	<h2>TEACHING ASSISTANT</h2>
+	<label for="name">Student Name:</label>
+    <input type="text" name="name" id="name" autofocus required><br>
+    <label for="id">Student ID:</label>
+    <input type="text" name="id" id="id" required><br>
+    <label for="gpa">GPA:</label>
+    <input type="text" name="gpa" id="gpa" required><br>
+
+	<label for="date">Submission Date:</label>
+    <input type="text" name="date" id="date"><br>
+
+
+
+	<label for="male">MALE:</label>
+    <input type="checkbox" name="male" id="male" value="pen"><br>
+    <label for="female">FEMALE:</label>
+    <input type="checkbox" name="female" id="female" value="vag"><br>
+    <label for="other">OTHER:</label>
+    <input type="checkbox" name="other" id="other" value="both"><br>
+	<label for="none">NONE:</label>
+    <input type="checkbox" name="none" id="none" value="huh"><br>
+<br>
+<label for="Comments">COMMENTS:</label>
+    <input type="text" name="Comments" id="Comments" ><br><br>
+   
+    <input type="submit" name="button" id="button" value="Submit">
+    <input type="reset" name="reset" id="reset"> 
+</form>	
+	</main>
+	
+	<footer>
+		
+		<p>&copy; Name & Phone Number 2021</p>
+	</footer>
+	
+</body>
+</html>
